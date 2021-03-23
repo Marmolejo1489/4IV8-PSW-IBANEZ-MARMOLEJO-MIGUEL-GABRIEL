@@ -1,0 +1,819 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Caveat', cursive;
+    }
+
+    html{
+        scroll-behavior: smooth;
+        background-color: black;
+    }
+
+    a:link{
+        font-size: 25px;
+        text-decoration: none;
+        color: white;
+        transition: all 500ms ease;
+    }
+    a:visited{
+        color:white;
+        text-decoration: none;
+    }
+    a:hover{
+        font-size: 45px;
+        color: black;
+        transition: all 500ms ease;
+    }
+
+    .mulholland{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .mulholland figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .mulholland figure img{
+        transition: all 500ms ease;
+    }
+    .mulholland figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 31, 116, 0.7);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .mulholland figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .mulholland figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .mulholland figure:hover > img{
+        transform: scale(1.3);
+    }
+    .mulholland figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .mulholland figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+    
+    .lyndon{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .lyndon figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .lyndon figure img{
+        transition: all 500ms ease;
+    }
+    .lyndon figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(59, 41, 0, 0.7);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .lyndon figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .lyndon figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .lyndon figure:hover > img{
+        transform: scale(1.3);
+    }
+    .lyndon figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .lyndon figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+
+    .bleu{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .bleu figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .bleu figure img{
+        transition: all 500ms ease;
+    }
+    .bleu figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(14, 14, 14, 0.7);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .bleu figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .bleu figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .bleu figure:hover > img{
+        transform: scale(1.3);
+    }
+    .bleu figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .bleu figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+
+    .rop{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .rop figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .rop figure img{
+        transition: all 500ms ease;
+    }
+    .rop figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.315);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .rop figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .rop figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .rop figure:hover > img{
+        transform: scale(1.3);
+    }
+    .rop figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .rop figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+
+    .mir{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .mir figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .mir figure img{
+        transition: all 500ms ease;
+    }
+    .mir figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(42, 131, 182, 0.7);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .mir figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .mir figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .mir figure:hover > img{
+        transform: scale(1.3);
+    }
+    .mir figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .mir figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+
+    .booker{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .booker figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .booker figure img{
+        transition: all 500ms ease;
+    }
+    .booker figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 31, 116, 0.7);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .booker figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .booker figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .booker figure:hover > img{
+        transform: scale(1.3);
+    }
+    .booker figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .booker figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+    
+    .odrin{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .odrin figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .odrin figure img{
+        transition: all 500ms ease;
+    }
+    .odrin figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(59, 41, 0, 0.7);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .odrin figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .odrin figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .odrin figure:hover > img{
+        transform: scale(1.3);
+    }
+    .odrin figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .odrin figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+
+    .cheeks{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .cheeks figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .cheeks figure img{
+        transition: all 500ms ease;
+    }
+    .cheeks figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(14, 14, 14, 0.7);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .cheeks figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .cheeks figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .cheeks figure:hover > img{
+        transform: scale(1.3);
+    }
+    .cheeks figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .cheeks figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+
+    .dog{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .dog figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .dog figure img{
+        transition: all 500ms ease;
+    }
+    .dog figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.315);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .dog figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .dog figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .dog figure:hover > img{
+        transform: scale(1.3);
+    }
+    .dog figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .dog figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+
+    .teddy{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .teddy figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .teddy figure img{
+        transition: all 500ms ease;
+    }
+    .teddy figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(42, 131, 182, 0.7);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .teddy figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .teddy figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .teddy figure:hover > img{
+        transform: scale(1.3);
+    }
+    .teddy figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .teddy figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+
+    .eduviges{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .eduviges figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .eduviges figure img{
+        transition: all 500ms ease;
+    }
+    .eduviges figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 31, 116, 0.7);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .eduviges figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .eduviges figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .eduviges figure:hover > img{
+        transform: scale(1.3);
+    }
+    .eduviges figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .eduviges figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+    
+    .rodion{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .rodion figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .rodion figure img{
+        transition: all 500ms ease;
+    }
+    .rodion figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(59, 41, 0, 0.7);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .rodion figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .rodion figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .rodion figure:hover > img{
+        transform: scale(1.3);
+    }
+    .rodion figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .rodion figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+
+    .poeta{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .poeta figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .poeta figure img{
+        transition: all 500ms ease;
+    }
+    .poeta figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(14, 14, 14, 0.7);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .poeta figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .poeta figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .poeta figure:hover > img{
+        transform: scale(1.3);
+    }
+    .poeta figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .poeta figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+
+    .kepla{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .kepla figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .kepla figure img{
+        transition: all 500ms ease;
+    }
+    .kepla figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.315);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .kepla figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .kepla figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .kepla figure:hover > img{
+        transform: scale(1.3);
+    }
+    .kepla figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .kepla figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+
+    .huesitos{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .huesitos figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .huesitos figure img{
+        transition: all 500ms ease;
+    }
+    .huesitos figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(42, 131, 182, 0.7);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .huesitos figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .huesitos figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .huesitos figure:hover > img{
+        transform: scale(1.3);
+    }
+    .huesitos figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .huesitos figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+
+    .arrow{
+        position: fixed;
+        bottom: 100px;
+        right: 30px;
+        z-index: 9;
+    }
+      .arrow a{
+        height: 39px;
+        width: 37px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0);
+        display: block;
+        border-radius: 3px;
+    }
+      .arrow a span{
+        font-size: 25px;
+        line-height: 39px;
+    }
+
+    .home{
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9;
+    }
+      .home a{
+        height: 39px;
+        width: 37px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0);
+        display: block;
+        border-radius: 3px;
+    }
+      .home a span{
+        font-size: 25px;
+        line-height: 39px;
+    }
+
+    footer{
+        text-align: right;
+    }
