@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Caveat', cursive;
+    }
+
+    html{
+        scroll-behavior: smooth;
+        background-color: black;
+    }
+
+    a:link{
+        font-size: 25px;
+        text-decoration: none;
+        color: white;
+        transition: all 500ms ease;
+    }
+    a:visited{
+        color:white;
+        text-decoration: none;
+    }
+    a:hover{
+        font-size: 45px;
+        color: black;
+        transition: all 500ms ease;
+    }
+
+    .primero{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .primero figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .primero figure img{
+        transition: all 500ms ease;
+    }
+    .primero figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 31, 116, 0.7);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .primero figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .primero figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .primero figure:hover > img{
+        transform: scale(1.3);
+    }
+    .primero figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .primero figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+    
+    .segundo{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .segundo figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .segundo figure img{
+        transition: all 500ms ease;
+    }
+    .segundo figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(59, 41, 0, 0.7);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .segundo figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .segundo figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .segundo figure:hover > img{
+        transform: scale(1.3);
+    }
+    .segundo figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .segundo figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+
+    .tercero{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .tercero figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .tercero figure img{
+        transition: all 500ms ease;
+    }
+    .tercero figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(14, 14, 14, 0.7);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .tercero figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .tercero figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .tercero figure:hover > img{
+        transform: scale(1.3);
+    }
+    .tercero figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .tercero figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+
+    .cuarto{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .cuarto figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .cuarto figure img{
+        transition: all 500ms ease;
+    }
+    .cuarto figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.315);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .cuarto figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .cuarto figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .cuarto figure:hover > img{
+        transform: scale(1.3);
+    }
+    .cuarto figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .cuarto figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+
+    .quinto{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(to top, black, black);
+    }
+    .quinto figure{
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .quinto figure img{
+        transition: all 500ms ease;
+    }
+    .quinto figure .cuadro{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(42, 131, 182, 0.7);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .quinto figure:hover > .cuadro{
+        opacity: 1;
+        visibility: visible;
+    }
+    .quinto figure:hover > .cuadro h1{
+        margin-top: 100px;
+        margin-bottom: 15px;
+    }
+    .quinto figure:hover > img{
+        transform: scale(1.3);
+    }
+    .quinto figure .cuadro h1{
+        color: white;
+        margin-bottom: 120px;
+        transition: all 500ms ease;
+        margin-top: 30px;
+    }
+    .quinto figure .cuadro table{
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+
+    .arrow{
+        position: fixed;
+        bottom: 100px;
+        right: 30px;
+        z-index: 9;
+    }
+      .arrow a{
+        height: 39px;
+        width: 37px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0);
+        display: block;
+        border-radius: 3px;
+    }
+      .arrow a span{
+        font-size: 25px;
+        line-height: 39px;
+    }
+
+    .home{
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9;
+    }
+      .home a{
+        height: 39px;
+        width: 37px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0);
+        display: block;
+        border-radius: 3px;
+    }
+      .home a span{
+        font-size: 25px;
+        line-height: 39px;
+    }
+
+    footer{
+        text-align: right;
+    }

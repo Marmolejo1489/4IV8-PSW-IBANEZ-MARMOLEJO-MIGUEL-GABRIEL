@@ -1,0 +1,26 @@
+a:link{
+    text-decoration: none;
+    color: blackite;
+    transition: all 500ms ease;
+}
+a:visited{
+    color:black;
+    text-decoration: none;
+}
+
+@media (min-width: 600px) {
+    .enlaces {
+    padding: 20px;
+    font-size: 1.5em;
+    }
+}
+@media (min-width: 800px) {
+    .enlaces {
+    padding: 40px;
+    font-size: 2em;
+    }
+}
+
+footer{
+    text-align: center;
+}
