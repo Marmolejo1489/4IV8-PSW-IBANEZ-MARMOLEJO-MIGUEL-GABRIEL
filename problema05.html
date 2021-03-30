@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problema 6: cálculo de edad</title>
+    <title>Problema 5: masculino y femenino</title>
     <link rel="stylesheet" href="CSS/problemas.css">
     <link rel="stylesheet" href="CSS/favicon.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="shortcut icon" type="image/png" href="img/js_icon.png">
-    <script src="JS/problema06.js"></script>
+    <script src="JS/problema05.js"></script>
 </head>
 <body>
     <header>
@@ -34,42 +34,50 @@
         </nav>
     </header>
     <h1>
-        <br><br>Realizar un algoritmo que calcule la edad de una persona.
+        <br><br>Un maestro desea saber qué porcentaje de hombres y qué porcentaje de mujeres
+        hay en un grupo de estudiantes.
     </h1>
     <form method="post" name="formulario">
         <table>
             <tr>
                 <td class="td_sup">
-                    Digite el año actual:
+                    Digite el total de caballeros:
                 </td>
                 <td class="td_sup">
-                    <input type="text" name="año_actual" onkeypress="return validarn(event)">
+                    <input type="text" name="num_chlopcy" onkeypress="return validarn(event)">
                 </td>
             </tr>
             <tr>
                 <td class="td_inf">
-                    Digite el año de su nacimiento:
+                    Digite el total de damas:
                 </td>
                 <td class="td_inf">
-                    <input type="text" name="año_nacer" onkeypress="return validarn(event)">
+                    <input type="text" name="num_dziewczynki" onkeypress="return validarn(event)">
                 </td>
             </tr>
             <tr>
                 <td class="td_sup"></td>
                 <td class="td_sup">
-                    <input type="button" value="Calcular edad" name="enviar" onclick="calculo()">
+                    <input type="button" value="Calcular porcentajes" name="enviar" onclick="calculo()">
                 </td>
             </tr>
             <tr>
                 <td class="td_inf">
-                    Edad aproximada:
+                    Porcentaje masculino:
                 <td class="td_inf">
-                    <input type="text" name="final" id="cantidad" readonly="readonly" class="input_text">
+                    <input type="text" name="final_chlopcy" id="cantidad" readonly="readonly" class="input_text">
                 </td>
             </tr>
             <tr>
-                <td class="td_sup"></td>
                 <td class="td_sup">
+                    Porcentaje femenino:
+                <td class="td_sup">
+                    <input type="text" name="final_dziewczynki" id="cantidad" readonly="readonly" class="input_text">
+                </td>
+            </tr>
+            <tr>
+                <td class="td_inf"></td>
+                <td class="td_inf">
                     <input type="button" value="Borrar" name="reset" onclick="borrar()">
                 </td>
             </tr>

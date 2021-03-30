@@ -7,6 +7,7 @@
 
 html{
     scroll-behavior: smooth;
+    background-color: black;
     background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/06/Technology-Dekstop-Wallpapers.jpg");
     background-size: cover;
     background-repeat: no-repeat;
