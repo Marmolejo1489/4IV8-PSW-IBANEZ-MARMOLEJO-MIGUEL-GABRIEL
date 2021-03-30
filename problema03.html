@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problema 1: inversión al 2 %</title>
+    <title>Problema 3: descuento en una tienda</title>
     <link rel="stylesheet" href="CSS/problemas.css">
     <link rel="stylesheet" href="CSS/favicon.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="shortcut icon" type="image/png" href="img/js_icon.png">
-    <script src="JS/problema01.js"></script>
+    <script src="JS/problema03.js"></script>
 </head>
 <body>
     <header>
@@ -34,51 +34,37 @@
         </nav>
     </header>
     <h1>
-        <br><br>Se le ha ordenado diseñar una aplicación web que pueda calcular el interés del pago mensual
-        de una inversion al 2 %, para lo cual deberá diseñar un formulario que haga dicho cálculo.
+        <br><br>Una tienda ofrece un descuento del 15 % sobre el total de la compra y un cliente
+        desea saber cuánto deberá pagar finalmente por su compra.
     </h1>
     <form method="post" name="formulario">
         <table>
             <tr>
                 <td class="td_sup">
-                    Digite la cantidad a invertir:
+                    Digite el total de la compra:
                 </td>
                 <td class="td_sup">
-                    <input type="text" name="cantidad" onkeypress="return validarn(event)"> $
+                    <input type="text" name="compra" onkeypress="return validarn(event)">
+                </td>
+            </tr>
+            <tr>
+                <td class="td_inf"></td>
+                <td class="td_inf">
+                    <input type="button" value="Obtener precio con descuento" name="enviar" onclick="calculo()">
+                </td>
+            </tr>
+            <tr>
+                <td class="td_sup">
+                    El total a pagar es:
+                <td class="td_sup">
+                    <input type="text" name="final" id="cantidad" readonly="readonly" class="input_text">
                 </td>
             </tr>
             <tr>
                 <td class="td_inf">
-                    Seleccione la cantidad de meses:
-                </td>
+                    El descuento aplicado es:
                 <td class="td_inf">
-                    <select name="mes">
-                        <option value="0">Seleccione una cantidad
-                        <option value="1">1
-                        <option value="2">2
-                        <option value="3">3
-                        <option value="4">4
-                        <option value="5">5
-                        <option value="6">6
-                        <option value="7">7
-                        <option value="8">8
-                        <option value="9">9
-                        <option value="10">10
-                        <option value="11">11
-                        <option value="12">12
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td class="td_sup"></td>
-                <td class="td_sup"><input type="button" value="Obtener interés" name="enviar" onclick="interes()"></td> 
-            </tr>
-            <tr>
-                <td class="td_inf">
-                    Saldo total con interés al 2 %:
-                </td>
-                <td class="td_inf">
-                    <input type="text" name="sueldoti" id="cantidadi" readonly="readonly" class="input_text">
+                    <input type="text" name="final_descuento" id="cantidad" readonly="readonly" class="input_text">
                 </td>
             </tr>
             <tr>
