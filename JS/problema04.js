@@ -11,7 +11,7 @@ function validarn(e){
 function calculo(){
     var valor0 = document.formulario.examen_1.value;
     var valor01 = document.formulario.examen_2.value;
-    var valor02 = document.formulario.examen_1.value;
+    var valor02 = document.formulario.examen_3.value;
     var valor1 = document.formulario.examen_final.value;
     var valor2 = document.formulario.trabajo_final.value;
     var valor_a = parseInt(valor0);
@@ -26,8 +26,10 @@ function calculo(){
 }
 
 function borrar(){
-    document.formulario.examen = "";
+    document.formulario.examen_1.value = "";
+    document.formulario.examen_2.value = "";
+    document.formulario.examen_3.value = "";
     document.formulario.examen_final.value = "";
     document.formulario.trabajo_final.value = "";
-    document.formulario.promedio_final = "";
+    document.formulario.promedio_final.value = "";
 }
