@@ -1,8 +1,3 @@
-/*
-Creación de una función encargada de validar
-la entrada de números mediante una expresión regular.
-*/
-
 function validarn(e){
     var teclado = (document.all)?e.keyCode:e.which;
     if(teclado == 8)return true;
@@ -13,19 +8,20 @@ function validarn(e){
     return patron.test(prueba);
 }
 
-
-function interes(){
-    var valor = document.formulario.cantidad.value;
+function comision(){
+    var valor = document.formulario.sueldo.value;
+    var valor2 = document.formulario.ventas.value;
+    var mes = parseInt(valor2)
     var result = parseInt(valor);
-    var interes = result*0.02;
-    var mes = interes*document.formulario.mes.value;
-    var total = result+mes;
+    var comision = (mes * result) * 0.1;
+    var total = result + comision;
 
+    document.formulario.comisionn.value = comision + " $";
     document.formulario.sueldoti.value = total + " $";
 }
 
 function borrar(){
-    document.formulario.cantidad.value = "";
-    document.formulario.mes.value = "";
+    document.formulario.comisionn.value = "";
     document.formulario.sueldoti.value = "";
+    document.formulario.cantidad.value = "";
 }
