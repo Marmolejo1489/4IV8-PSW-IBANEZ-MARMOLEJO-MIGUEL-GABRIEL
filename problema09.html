@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problema 1: inversión al 2 %</title>
+    <title>Problema 9: horas extra</title>
     <link rel="stylesheet" href="CSS/problemas.css">
     <link rel="stylesheet" href="CSS/favicon.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="shortcut icon" type="image/png" href="img/js_icon.png">
-    <script src="JS/problema01.js"></script>
+    <script src="JS/problema09.js"></script>
 </head>
 <body>
     <header>
@@ -34,51 +34,40 @@
         </nav>
     </header>
     <h1>
-        <br><br>Se le ha ordenado diseñar una aplicación web que pueda calcular el interés del pago mensual
-        de una inversion al 2 %, para lo cual deberá diseñar un formulario que haga dicho cálculo.
+        <br><br>Determinar la cantidad de dinero que recibirá un trabajador por concepto de las horas extras 
+        trabajadas en una empresa, sabiendo que cuando las horas de trabajp exceden de 40, el resto se consideran 
+        horas extra y que estas se pagan al doble de una hora normal cuando no exceden de 8; si las horas extras 
+        exceden de 8, se pagan las primeras 8 al doble de lo que se pagan las horas normales y el resto al triple.
     </h1>
     <form method="post" name="formulario">
         <table>
             <tr>
                 <td class="td_sup">
-                    Digite la cantidad a invertir:
+                    Digite las horas trabajadas:
                 </td>
                 <td class="td_sup">
-                    <input type="text" name="cantidad" onkeypress="return validarn(event)"> $
+                    <input type="text" name="hora" onkeypress="return validarn(event)">
                 </td>
             </tr>
             <tr>
                 <td class="td_inf">
-                    Seleccione la cantidad de meses:
+                    Digite el pago por hora:
                 </td>
                 <td class="td_inf">
-                    <select name="mes">
-                        <option value="0">Seleccione una cantidad
-                        <option value="1">1
-                        <option value="2">2
-                        <option value="3">3
-                        <option value="4">4
-                        <option value="5">5
-                        <option value="6">6
-                        <option value="7">7
-                        <option value="8">8
-                        <option value="9">9
-                        <option value="10">10
-                        <option value="11">11
-                        <option value="12">12
-                    </select>
+                    <input type="text" name="pago" onkeypress="return validarn(event)"> $
                 </td>
             </tr>
             <tr>
                 <td class="td_sup"></td>
-                <td class="td_sup"><input type="button" value="Obtener interés" name="enviar" onclick="calculo()"></td> 
+                <td class="td_sup">
+                    <input type="button" value="Calcular sueldo" name="enviar" onclick="calculo()">
+                </td>
             </tr>
             <tr>
                 <td class="td_inf">
-                    Saldo total con interés al 2 %:
-                </td>
+                    Sueldo:
                 <td class="td_inf">
-                    <input type="text" name="sueldoti" id="cantidadi" readonly="readonly" class="input_text">
+                    <input type="text" name="sueldo" id="cantidad" readonly="readonly" class="input_text"> $
                 </td>
             </tr>
             <tr>

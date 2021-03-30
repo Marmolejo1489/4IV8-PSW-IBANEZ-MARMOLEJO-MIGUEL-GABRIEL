@@ -1,17 +1,12 @@
 function validar(formulario){
-    /*
-    Validar que se escriban más de cinco caracteres en el campo de nombre.
-    */ 
-
+    //Validar que se escriban más de dos caracteres en el campo de nombre.
     if(formulario.nombre.value.length <= 2){
         alert("Escriba más de un carácter en el campo correspondiente.");
         formulario.nombre.focus();
     return false;
     }
 
-    /*
-    Validar que acepte únicamente letras.
-    */
+    //Validar que acepten únicamente letras.
     var checkOk = "QWERTYUIOPASDFGHJKLÑZXCVBNM" 
     + "qwertyuioasdfghjklzxcvbnm";
 
@@ -37,9 +32,7 @@ function validar(formulario){
         return false;
     }
 
-    /*
-    Validar que se escriban solo números.
-    */
+    //Validar que se escriban solo números.
     var checkOk = "1234567890";
 
     var checkStr = formulario.edad.value;
@@ -64,13 +57,7 @@ function validar(formulario){
         return false;
     }
 
-    /*
-    Validar correo electronico
-    Expresiones regulares
-    a poder diferenciar una cadena de caracteres
-    y definir qué caracteres son válidos de acuerdo
-    a una condición.
-    */
+    //Validar correo electrónico.
     var txt = formulario.email.value;
 
     var b = /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/;

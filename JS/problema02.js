@@ -8,7 +8,7 @@ function validarn(e){
     return patron.test(prueba);
 }
 
-function comision(){
+function calculo(){
     var valor0 = document.formulario.sueldo.value;
     var valor1 = document.formulario.ventas.value;
     var result = parseInt(valor0);

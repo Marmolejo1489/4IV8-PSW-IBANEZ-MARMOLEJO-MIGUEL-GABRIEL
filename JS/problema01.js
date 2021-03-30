@@ -1,7 +1,5 @@
-/*
-Creación de una función encargada de validar
-la entrada de números mediante una expresión regular.
-*/
+//Creación de una función encargada de validar
+//la entrada de números mediante una expresión regular.
 
 function validarn(e){
     var teclado = (document.all)?e.keyCode:e.which;
@@ -13,8 +11,7 @@ function validarn(e){
     return patron.test(prueba);
 }
 
-
-function interes(){
+function calculo(){
     var valor = document.formulario.cantidad.value;
     var result = parseInt(valor);
     var interes = result*0.02;
