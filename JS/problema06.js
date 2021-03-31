@@ -14,8 +14,11 @@ function calculo(){
     var valor_a = parseInt(valor0);
     var valor_b = parseInt(valor1);
     var final = valor_a - valor_b;
-
-    document.formulario.final.value = final + " años";
+    if (valor_a <= valor_b) {
+        window.alert("Digite un año válido, por favor.");
+    } else {
+        document.formulario.final.value = final + " años";
+    }
 }
 
 function borrar(){
