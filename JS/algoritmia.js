@@ -68,19 +68,82 @@ function problema2(){
 
 }
 
-function problema3(){
-    let letras = document.querySelector('#p3-input').value;
-    let palabras = letras.split(",");
-    let palabra_mayor = "";
- 
-    for(let word of palabras){
-        if(word.length > palabra_mayor.length){
-        palabra_mayor = word;
- 
-        var letras_num = palabra_mayor.split("");
-        var num = letras_num.length;
+function validarentrada(palabra){
+    var longitud = palabra.length;
+    for(var i=0;i<longitud;i++){
+        if((i==0&&palabra.charCodeAt(i)==32)||(i==longitud-1&&palabra.charCodeAt(i)==32)||(palabra.charCodeAt(i)==32&&palabra.charCodeAt(i-1)==32)){
+            if(i==0){
+                alert("No coloque espacios al inicio de la entrada.");
+            }
+            else{
+                if(i==longitud-1){
+                    alert("No coloque espacios al final de la entrada.");
+                }
+                else{
+                    alert("No coloque espacios entre las palabras.");
+                }
+            }
+            return false;
         }
     }
-    
-    document.querySelector('#p3-output').textContent = 'La palabra con más caracteres es: ' + palabra_mayor + ' ' + num + ' (' + letras + ')' ;
+    return true;
+}
+function problema3(){
+    var p3_input = document.querySelector('#p3-input').value;
+    var longitud;
+    var maximo = 0;
+    var aux;
+    var cubeta = [27];
+    var p3_array;
+    var respuesta;
+    var aux2=0;
+    var aux_array;
+    var bandera;
+    if(validarentrada(p3_input)){
+        p3_array = p3_input.split(',');
+        p3_array.forEach(function (palabra){
+            for(var j=0;j<26;j++){
+                cubeta[j] = false;
+            }
+            aux = 0;
+            longitud = palabra.length;
+            for(var j=0;j<longitud;j++){
+                if(!cubeta[palabra.charCodeAt(j)-65]){
+                    aux++;
+                    cubeta[palabra.charCodeAt(j)-65] = true;
+                }
+            }
+            if(aux>maximo){
+                respuesta = palabra;
+                maximo = aux;
+                aux2 = 1;
+            }
+            else{
+                bandera = true;
+                aux_array = respuesta.split(',');
+                aux_array.forEach(function(palabra_aux){
+                    if(palabra_aux==palabra){
+                        bandera = false;
+                    }
+                })
+                if(bandera == true){
+                    if(aux==maximo){
+                        aux2++;
+                        if(aux2==2){
+                            respuesta+=" y ";
+                            respuesta+=palabra;
+                        }
+                        else{
+                            respuesta = palabra + " , " + respuesta;
+                        }
+                    }
+                }
+            }
+        });
+        document.querySelector('#p3-output').textContent = 'La palabra con más caracteres únicos es: ' + respuesta + '.';
+    }
+    else{
+        document.querySelector('#p3-input').value = "";
+        document.querySelector('#p3-output').textContent = 'Esperando respuesta...';
+    }
 }
