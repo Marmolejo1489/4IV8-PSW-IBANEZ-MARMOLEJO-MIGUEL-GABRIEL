@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro de Usuarios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    </head>
+    <body>
+        <div class="cuadro_identificarse">
+            <form action="index.html" method="get" id="form" name="form" onsubmit="return valida_envia(event)">
+                <h3>Registrar</h3>
+                <div class="container">
+                    <input type="text" placeholder="Usuario" required maxlength="35" onkeypress="return soloLetras(event)">
+                </div>
+                <div class="container">
+                    <input type="text" placeholder="Apellido paterno" required maxlength="35" onkeypress="return soloLetras(event)">
+                </div>
+                <div class="container">
+                    <input type="text" placeholder="Apellido materno" required maxlength="35" onkeypress="return soloLetras(event)">
+                </div>
+                <div class="container">
+                    <input type="text" placeholder="Edad" required maxlength="35" onkeypress="return soloLetras(event)">
+                </div>
+                <div class="container">
+                    <input type="email" placeholder="Correo electrónico" required="" onsubmit="return validarEmail(event)">
+                </div>
+                <input type="submit" value="Registrar usuario" name="enviar">
+                <input type="submit" value="Eliminar usuario" name="enviar">
+            </form>
+        </div>
+        <div class="containerConsulta" >
+            <form method="get" name="consultarregistro" action="Consultar">
+                <h3>Consultar</h3>
+                Haz clic en el botón para visualizar una tabla con los datos de
+                todos los usuarios registrados.
+                <input type="submit" value="Consultar tabla de usuarios" >
+            </form>
+        </div>
+        <div class="containerEliminar" >
+            <form method="post" name="formularioeliminar" action="Eliminar">
+                <h3>Eliminar</h3>
+                <label>ID del usuario a eliminar:</label>
+                <input type="number" name="ideliminar">
+                <br>
+                <input type="submit" value="Eliminar Usuario" >
+            </form>
+        </div>
+        <div class="containerActualizar">
+            <form method="" name="" action="">
+                <h3>Actualizar</h3>
+            </form>
+        </div>
+    </body>
+    <!-- El código original del profe:
+            <div class="containerRegistro">
+                
+                <form name="formulario" method="post" 
+                  action="Registro">
+                <label>Nombre:</label>
+                <input type="text" name="nombre" >
+                <br>
+                <label>Apellido Paterno:</label>
+                <input type="text" name="appat" >
+                <br>
+                <label>Apellido Materno:</label>
+                <input type="text" name="appmat" >
+                <br>
+                <label>Edad:</label>
+                <input type="number" name="edad" min="01" max="99" size="2" >
+                <br>
+                <label>Correo:</label>
+                <input type="email" name="correo" >
+                <br>
+                <input type="submit" value="Registro de Usuarios" >
+                <input type="reset" value="Borrar Registro" >
+                </form>
+            </div>-->
+</html>
