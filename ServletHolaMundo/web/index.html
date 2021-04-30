@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Un CRUD</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="icon.png" type="image/png">
+        <link rel="stylesheet" href="./CSS/estilo.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="containerRegistro">
+                <div class="title"><center>Registro de un usuario</center></div>
+                <form name="formulario" method="get" action="Registro" onsubmit="return validarRegistro(this)">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details">Nombre</span>
+                            <input type="text" name="nombre" placeholder="Digite su nombre" required>
+                            <span class="details"><br>Correo electrónico</span>
+                            <input type="email" name="correo" placeholder="Digite su correo electrónico" required>
+                            <span class="details"><br>Apellido paterno</span>
+                            <input type="text" name="appat" placeholder="Digite su apellido paterno" required>
+                            <span class="details"><br>Apellido materno</span>
+                            <input type="text" name="apmat" placeholder="Digite su apellido materno" required>
+                            <span class="details"><br>Edad</span>
+                            <input type="number" name="edad" placeholder="Digite su edad" required onkeypress="return validarn(event)">
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Registrar">
+                    </div>
+                    <div class="button">
+                        <input type="reset" value="Eliminar datos">
+                    </div>
+                </form>
+            </div>
+            
+            <div class="containerConsulta">
+                <div class="title"><center>Visualización de usuarios registrados</center></div>
+                <form method="get" name="consultarregistro" action="Consultar">
+                    <div class="button">
+                        <input type="submit" value="Consultar datos">
+                    </div>
+                </form>
+            </div>
+            <div class="containerEliminar">
+                <div class="title"><center>Eliminación de un usuario</center></div>
+                <form method="post" name="formularioeliminar" action="Eliminar" onsubmit="return validarIDE(this)"><br>
+                    <div class="user-details">
+                    <div class="input-box">
+                      <span class="details">Ingrese ID del usuario a eliminar</span>
+                      <input type="number" name="ideliminar" placeholder="Digite el ID" required onkeypress="return validarn(event)">
+                    </div>
+                    </div>
+                    <div class="button">
+                    <input type="submit" value="Eliminar usuario">
+                    </div>
+                </form>
+            </div>
+            
+            <div class="containerActualizar">
+                <div class="title"><center>Actualización de un usuario</center></div>
+                <form method="post" name="formularioactualizar" action="Actualizar" onsubmit="return validarIDA(this)"><br>
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details">Ingrese ID del usuario a actualizar:</span>
+                            <input type="number" name="idactualizar" placeholder="Digite el ID" required onkeypress="return validarn(event)">
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Actualizar datos">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="./JS/validacion.js"></script>
+    </body>
+</html>
