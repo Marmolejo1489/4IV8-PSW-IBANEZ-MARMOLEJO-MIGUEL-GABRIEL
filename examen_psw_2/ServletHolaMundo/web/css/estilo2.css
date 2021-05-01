@@ -1,0 +1,37 @@
+body{
+  height: 150vh;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: white;
+}
+
+.title{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.tabla{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 41.8%;
+}
+
+.tabla2{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 39%;
+}
+
+.link1{
+    margin-bottom: 10px;
+    margin-left: 44.5%;
+    text-align: center;
+}
+
+.link2{
+    margin-right: 10px;
+    margin-left: 45.4%;
+    text-align: center;
+}

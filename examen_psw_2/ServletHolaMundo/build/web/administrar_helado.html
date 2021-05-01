@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Administrar | Ben & Jerry's</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/icon.png" type="image/png">
+        <link rel="stylesheet" href="CSS/estilo.css" type="text/css"/>
+        <script src="JS/validacion.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="containerRegistro">
+                <div class="title" style="text-align: center;">Registro de un producto</div>
+                <form name="formulario" method="get" action="Registro" onsubmit="return validarRegistro(this)">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details">Nombre</span>
+                            <input type="text" name="nombre" placeholder="Digite el nombre del producto" required>
+                            <span class="details"><br>Precio</span>
+                            <input type="email" name="precio" placeholder="Digite el precio del producto" required onkeypress="return validarn(event)">
+                            <span class="details"><br>Gramos</span><br>
+                            <select class="box_form">
+                                <option value="0">Seleccione los gramos de grasa</option>
+                                <option value="100">100 gramos</option>
+                                <option value="200">200 gramos</option>
+                                <option value="300">300 gramos</option>
+                            </select>
+                            <span class="details"><br>Tamaño</span><br>
+                            <select class="box_form">
+                                <option value="0">Seleccione un tamaño</option>
+                                <option value="s">Pequeño</option>
+                                <option value="m">Mediano</option>
+                                <option value="l">Grande</option>
+                            </select>
+                            <span class="details"><br>Recipiente</span><br>
+                            <select class="box_form">
+                                <option value="0">Seleccione un recipiente</option>
+                                <option value="cono">Cono</option>
+                                <option value="vaso">Vaso</option>
+                                <option value="tupper">Tupper</option>
+                            </select>
+                            <span class="details"><br>Tipo</span><br>
+                            <select class="box_form">
+                                <option value="0">Seleccione un tipo de producto</option>
+                                <option value="fresa">Helado de fresa</option>
+                                <option value="limon">Helado de limón</option>
+                                <option value="vainilla">Helado de vainilla</option>
+                                <option value="chocolate">Helado de chocolate</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Registrar">
+                    </div>
+                    <div class="button">
+                        <input type="reset" value="Restablecer">
+                    </div>
+                </form>
+                <div class="title" style="text-align: center;"><hr>Registro de una promoción</div>
+                <form name="formulario" method="get" action="Registro" onsubmit="return validarRegistro(this)">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details">Nombre</span>
+                            <input type="text" name="nombre" placeholder="Digite el nombre de la promoción" required>
+                            <span class="details"><br>Tipo</span><br>
+                            <select class="box_form">
+                                <option value="0">Seleccione un tipo de promoción</option>
+                                <option value="10">10 %</option>
+                                <option value="25">20 %</option>
+                                <option value="50">50 %</option>
+                                <option value="75">75 %</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Registrar">
+                    </div>
+                    <div class="button">
+                        <input type="reset" value="Restablecer">
+                    </div>
+                </form>
+            </div>
+            <div class="containerConsulta">
+                <div class="title" style="text-align: center;"><hr>Visualización de productos o promociones</div>
+                <form method="get" name="consultarregistro" action="Consultar">
+                    <div class="button">
+                        <input type="submit" value="Consultar productos">
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Consultar promoción">
+                    </div>
+                </form>
+            </div>
+            <div class="containerEliminar">
+                <div class="title" style="text-align: center;"><hr>Eliminación de productos o promociones</div>
+                <form method="post" name="formularioeliminar" action="Eliminar" onsubmit="return validarIDE(this)"><br>
+                    <div class="user-details">
+                    <div class="input-box">
+                      <span class="details">Ingrese ID a eliminar</span>
+                      <input type="number" name="ideliminar" placeholder="Digite el ID" required onkeypress="return validarn(event)">
+                    </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Eliminar producto">
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Eliminar promoción">
+                    </div>
+                </form>
+            </div>
+            <div class="containerActualizar">
+                <div class="title" style="text-align: center;"><hr>Actualización de productos o promociones</div>
+                <form method="post" name="formularioactualizar" action="Actualizar" onsubmit="return validarIDA(this)"><br>
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details">Ingrese ID a actualizar</span>
+                            <input type="number" name="idactualizar" placeholder="Digite el ID" required onkeypress="return validarn(event)">
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Actualizar producto">
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Actualizar promoción">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <p style="text-align: center;">Elaborado por: Ibáñez Marmolejo, Miguel Gabriel; Martínez Zaragoza, Alan Gael; Pérez Paz, Diego Azael (4IV8).
+                <br><br>Profesor: Jaime Minor Gómez (Programación y Servicios Web).
+            </p>
+        </footer>
+    </body>
+</html>
