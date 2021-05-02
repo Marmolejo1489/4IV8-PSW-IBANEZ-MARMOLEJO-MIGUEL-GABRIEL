@@ -1,0 +1,126 @@
+*{
+    font-family: bengrraas;
+}
+
+@font-face {
+    font-family: 'bengrraas';
+    src: url(fonts/bengrraas-regular.ttf);
+}
+
+body {
+    font-size: x-large;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 0 3px black;
+}
+
+footer {
+    position:absolute;
+    bottom: 0;
+}
+
+header li {
+    display: inline;
+    padding-left: 45px;
+}
+
+header li a {
+    color: black;
+    text-decoration: none;
+    padding: 13px;
+    transition: .3s ease;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+header li a:hover {
+    color: blue;
+}
+
+header li img {
+    width: 180px;
+    float: left;
+    margin-top: -20px;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+td {
+    padding: 15px;
+}
+
+.active {
+    color: blue;
+}
+
+.cuadro_busqueda {
+    margin:2rem auto;
+    display: block;
+    width: 1000px;
+    height: 150px;
+    border: 2px outset black;    
+    text-align: left;
+}
+
+.cuadro_identificarse {
+    min-height: 80vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cuadro_identificarse form {
+    height: 480px;
+    width: 360px;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+}
+
+.cuadro_identificarse form h3 {
+    font-size: 30px;
+    padding: 30px 0;
+    letter-spacing: 3px;
+}
+
+.cuadro_identificarse form input {
+    height: 40px;
+    width: 82%;
+    font-size: 17px;
+    padding: 0 10px;
+    margin: 15px 0;
+    letter-spacing: 1px;
+    border-radius: 15px;
+}
+
+.cuadro_identificarse form input[type="submit"] {
+    color: white;
+    width: 90%;
+    cursor: pointer;
+    background: rgb(133, 0, 0);
+    margin-top: 30px;
+    border-radius: 50px;
+}
+
+.cuadro_identificarse form input[type="submit"]:hover {
+    letter-spacing: 3px;
+    transition: .3s ease;
+}
+
+.centrado {
+    margin-left: auto;
+    margin-right: auto;
+}
