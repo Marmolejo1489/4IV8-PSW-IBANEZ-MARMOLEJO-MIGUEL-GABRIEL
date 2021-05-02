@@ -5,11 +5,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="img/icon.png" type="image/png">
+        <link rel="icon" type="image/png" href="img/icon.png">
         <link rel="stylesheet" href="css/estilo.css" type="text/css"/>
         <script src="JS/validacion.js"></script>
     </head>
     <body>
+        <div class="home">
+        <a href="index.html" title="Vuelve a la página principal"><span style="font-size: xx-large">🏠</span></a>
+        </div>
         <div class="container">
             <div class="containerRegistro">
                 <div class="title" style="text-align: center;">Registro de un producto</div>
@@ -17,38 +20,17 @@
                     <div class="user-details">
                         <div class="input-box">
                             <span class="details">Nombre</span>
-                            <input type="text" name="nombre" placeholder="Digite el nombre del producto" required>
+                            <input type="text" name="name" placeholder="Digite el nombre del producto" required>
                             <span class="details"><br>Precio</span>
-                            <input type="email" name="precio" placeholder="Digite el precio del producto" required onkeypress="return validarn(event)">
-                            <span class="details"><br>Gramos</span><br>
-                            <select class="box_form">
-                                <option value="0">Seleccione los gramos de grasa</option>
-                                <option value="100">100 gramos</option>
-                                <option value="200">200 gramos</option>
-                                <option value="300">300 gramos</option>
-                            </select>
-                            <span class="details"><br>Tamaño</span><br>
-                            <select class="box_form">
-                                <option value="0">Seleccione un tamaño</option>
-                                <option value="s">Pequeño</option>
-                                <option value="m">Mediano</option>
-                                <option value="l">Grande</option>
-                            </select>
-                            <span class="details"><br>Recipiente</span><br>
-                            <select class="box_form">
-                                <option value="0">Seleccione un recipiente</option>
-                                <option value="cono">Cono</option>
-                                <option value="vaso">Vaso</option>
-                                <option value="tupper">Tupper</option>
-                            </select>
-                            <span class="details"><br>Tipo</span><br>
-                            <select class="box_form">
-                                <option value="0">Seleccione un tipo de producto</option>
-                                <option value="fresa">Helado de fresa</option>
-                                <option value="limon">Helado de limón</option>
-                                <option value="vainilla">Helado de vainilla</option>
-                                <option value="chocolate">Helado de chocolate</option>
-                            </select>
+                            <input type="number" name="price" placeholder="Digite el precio del producto">
+                            <span class="details"><br>Gramos</span>
+                            <input type="number" name="gram" placeholder="Digite los gramos del producto" required>
+                            <span class="details"><br>Tamaño</span>
+                            <input type="text" name="size" placeholder="Digite el tamaño del producto" required>
+                            <span class="details"><br>Recipiente</span>
+                            <input type="text" name="tipo" placeholder="Digite el tipo de producto" required>
+                            <span class="details"><br>Tipo</span>
+                            <input type="text" name="tipo" placeholder="Digite el tipo de producto" required>
                         </div>
                     </div>
                     <div class="button">
@@ -128,10 +110,5 @@
                 </form>
             </div>
         </div>
-        <footer>
-            <p style="text-align: center;">Elaborado por: Ibáñez Marmolejo, Miguel Gabriel; Martínez Zaragoza, Alan Gael; Pérez Paz, Diego Azael (4IV8).
-                <br><br>Profesor: Jaime Minor Gómez (Programación y Servicios Web).
-            </p>
-        </footer>
     </body>
 </html>
