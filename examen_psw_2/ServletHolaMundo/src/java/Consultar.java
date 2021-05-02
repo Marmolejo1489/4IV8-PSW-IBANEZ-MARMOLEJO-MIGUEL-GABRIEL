@@ -4,7 +4,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
@@ -17,7 +16,7 @@ public class Consultar extends HttpServlet {
     private ResultSet rs;
     
     public void init(ServletConfig cfg) throws ServletException{
-        String URL = "jdbc:mysql://localhost/registro4iv8";
+        String URL = "jdbc:mysql://localhost/helado";
         
         String userName = "root";
         String password = "=/U_x12%aX";

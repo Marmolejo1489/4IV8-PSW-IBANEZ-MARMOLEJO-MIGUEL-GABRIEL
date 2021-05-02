@@ -11,7 +11,6 @@ import java.sql.ResultSet;
 import javax.servlet.ServletConfig;
 
 public class Registro extends HttpServlet {
-    
     private Connection con;
     private Statement set;
     private ResultSet rs;
