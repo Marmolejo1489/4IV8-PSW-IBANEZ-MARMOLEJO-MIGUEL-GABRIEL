@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Comprar un helado | Ben & Jerry's</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/icon.png" type="image/png">
+        <link rel="stylesheet" href="css/estilo.css" type="text/css"/>
+        <script src="JS/validacion.js"></script>
+    </head>
+    <body>
+        <div class="home">
+        <a href="index.html" title="Vuelve a la página principal"><span style="font-size: xx-large">🏠</span></a>
+        </div>
+        <div class="container">
+            <div class="title" style="text-align: center;">¿Cómo lo hago?</div>
+            <br>
+            <p style="text-align: center;">Primero necesitas verificar cuáles hay disponibles.<br>Una vez que hayas encontrado uno 
+                que te guste, deberás recordar su ID.<br>Por último, ingresa el ID en la
+                casilla correspondiente para finalizar tu compra y disfrutar de tu delicioso
+                helado Ben & Jerry's.
+            </p>
+            <div class="containerConsulta">
+                <div class="title" style="text-align: center;"><hr>Visualizar helados disponibles</div>
+                <form method="get" name="consultarregistro" action="Consultar">
+                    <div class="button">
+                        <input type="submit" value="¡Visualizar!">
+                    </div>
+                </form>
+            </div>
+            <div class="containerEliminar">
+                <div class="title" style="text-align: center;"><hr>Comprar un helado</div>
+                <form method="post" name="formularioeliminar" action="Eliminar" onsubmit="return validarIDE(this)"><br>
+                    <div class="user-details">
+                    <div class="input-box">
+                      <span class="details">Ingrese ID del helado</span>
+                      <input type="number" name="ideliminar" placeholder="Digite el ID" required onkeypress="return validarn(event)">
+                    </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="¡Comprar!">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <p style="text-align: center;">Elaborado por: Ibáñez Marmolejo, Miguel Gabriel; Martínez Zaragoza, Alan Gael; Pérez Paz, Diego Azael (4IV8).
+                <br><br>Profesor: Jaime Minor Gómez (Programación y Servicios Web).
+            </p>
+        </footer>
+    </body>
+</html>
