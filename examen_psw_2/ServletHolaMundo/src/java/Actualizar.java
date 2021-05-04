@@ -17,7 +17,7 @@ public class Actualizar extends HttpServlet {
     
     public void init(ServletConfig cfg) throws ServletException{
         //lo primero que necesitamos es trazar la ruta al servidor de la bd
-        String URL = "jdbc:mysql://us-cdbr-east-03.cleardb.com";
+        String URL = "jdbc:mysql://us-cdbr-east-03.cleardb.com/heroku_240a23234b292ea";
         String userName = "b89af200f078f2";
         String password = "522acc62";
                 
@@ -103,7 +103,7 @@ public class Actualizar extends HttpServlet {
                     + "</thead>");
             try{
                 //mostramos los datos de el id del usuario ingresado en el index
-                String q="select * from mregistro where id_hel="+id;
+                String q="select * from helado where id_hel="+id;
                 set=con.createStatement();
                 rs=set.executeQuery(q);
                 while(rs.next()){

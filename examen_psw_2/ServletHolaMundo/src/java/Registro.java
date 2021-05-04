@@ -73,7 +73,7 @@ public class Registro extends HttpServlet {
                 out.println("<html>");
                 out.println("<head>");
                 out.println("<title>Administrar | Ben & Jerry's</title>");
-                out.println("<link rel=\"stylesheet\" href=\"./CSS/estilo2.css\">");
+                out.println("<link rel=\"stylesheet\" href=\"./css/estilo2.css\">");
                 out.println("</head>");
                 out.println("<body>");
                 out.println("<h1 class=\"title\">¡Registro exitoso!</h1>");
@@ -93,10 +93,10 @@ public class Registro extends HttpServlet {
                             + "<td>"+gram+"</td></tr>"
                             + "<td>"+size+"</td>"
                             + "<td>"+recipiente+"</td>"
-                            + "<td>"+tipo+"</td></tr>"
+                            + "<td>"+tipo+"</td>"
                             + "</tbody>");
                 out.println("</table>");
-                out.println("<a class=\"link1\" href='administra_helados.html'>Regresar al módulo de administrador.</a>");
+                out.println("<a class=\"link1\" href='administrar_helado.html'>Regresar al módulo de administrador.</a>");
                 out.println("<br>");
                 out.println("<a class=\"link2\" href='Consultar'>Consultar la tabla de helados.</a>");
                 out.println("</body>");
@@ -106,7 +106,7 @@ public class Registro extends HttpServlet {
                 out.println("<!DOCTYPE html>");
                 out.println("<html>");
                 out.println("<head>");
-                out.println("<title>Administrar | Ben & Jerry's</title>");            
+                out.println("<title>Administrar | Ben & Jerry's</title>");
                 out.println("</head>");
                 out.println("<body>");
                 out.println("<h1>Registro no exitoso. Intente de nuevo.</h1>" + "<a href='administrar_helado.html'>Regresar al módulo de administrador.</a>");

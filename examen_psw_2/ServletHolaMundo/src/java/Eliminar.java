@@ -16,7 +16,7 @@ public class Eliminar extends HttpServlet {
     private ResultSet rs;
     
     public void init(ServletConfig cfg) throws ServletException{
-        String URL = "jdbc:mysql://us-cdbr-east-03.cleardb.com";
+        String URL = "jdbc:mysql://us-cdbr-east-03.cleardb.com/heroku_240a23234b292ea";
         String userName = "b89af200f078f2";
         String password = "522acc62";
                 
@@ -84,13 +84,13 @@ public class Eliminar extends HttpServlet {
             
             //preparo mi sentencia: delete from tabla where atributo = valor
             
-            String q = "delete from mregistro where id_usu = "+id;
+            String q = "delete from helados where id_hel = "+id;
             
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Eliminación | Ben & Jerry's</title>");
-            out.println("<link rel=\"stylesheet\" href=\"./CSS/estilo2.css\">");
+            out.println("<link rel=\"stylesheet\" href=\"./css/estilo2.css\">");
             out.println("</head>");
             out.println("<body>");
             

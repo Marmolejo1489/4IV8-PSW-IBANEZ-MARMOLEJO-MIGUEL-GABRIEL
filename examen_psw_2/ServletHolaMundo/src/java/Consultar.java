@@ -16,7 +16,7 @@ public class Consultar extends HttpServlet {
     private ResultSet rs;
     
     public void init(ServletConfig cfg) throws ServletException{
-        String URL = "jdbc:mysql://us-cdbr-east-03.cleardb.com";
+        String URL = "jdbc:mysql://us-cdbr-east-03.cleardb.com/heroku_240a23234b292ea";
         String userName = "b89af200f078f2";
         String password = "522acc62";
                 
@@ -65,12 +65,13 @@ public class Consultar extends HttpServlet {
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Consulta | Ben & Jerry's</title>");
-            out.println("<link rel=\"stylesheet\" href=\"./CSS/estilo2.css\">");
+            out.println("<link rel=\"stylesheet\" href=\"./css/estilo2.css\">");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1 class=\"title\">Tabla de productos</h1>");
             out.println("<table class=\"tabla2\" border='2'>"
                     + "<thead>"
+                        + "<th>ID</th>"
                         + "<th>Nombre</th>"
                         + "<th>Precio</th>"
                         + "<th>Gramos</th>"
@@ -85,7 +86,7 @@ public class Consultar extends HttpServlet {
                 
                 //tenemos que crear la querry
                 
-                String q = "select * from mregistro";
+                String q = "select * from helados";
                 
                 set = con.createStatement();
                 rs = set.executeQuery(q);
