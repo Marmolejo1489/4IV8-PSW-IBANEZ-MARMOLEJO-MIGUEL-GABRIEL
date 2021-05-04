@@ -103,7 +103,7 @@ public class Actualizar extends HttpServlet {
                     + "</thead>");
             try{
                 //mostramos los datos de el id del usuario ingresado en el index
-                String q="select * from helado where id_hel="+id;
+                String q="select * from helados where id_hel="+id;
                 set=con.createStatement();
                 rs=set.executeQuery(q);
                 while(rs.next()){
