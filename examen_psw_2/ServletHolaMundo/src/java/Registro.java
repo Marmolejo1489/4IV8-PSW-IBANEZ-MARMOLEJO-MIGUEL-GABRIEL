@@ -19,9 +19,9 @@ public class Registro extends HttpServlet {
     
     @Override
     public void init(ServletConfig cfg) throws ServletException{
-        String URL = "jdbc:mysql://localhost/heroku_240a23234b292ea";
-        String userName = "root";
-        String password = "=/U_x12%aX";
+        String URL = "jdbc:mysql://us-cdbr-east-03.cleardb.com/heroku_240a23234b292ea";
+        String userName = "b89af200f078f2";
+        String password = "522acc62";
                 
         try{
             Class.forName("com.mysql.jdbc.Driver");
@@ -65,14 +65,14 @@ public class Registro extends HttpServlet {
             puertoh = request.getRemotePort();
             
             try{
-                String q = "insert into Mregistro (name_hel, price_hel, gram_hel, size_hel, recipiente_hel, tipo_hel) values ('"+name+"', '"+price+"', '"+gram+"', "+size+", '"+recipiente+"', '"+tipo+"')";
+                String q = "insert into helados (name_hel, price_hel, gram_hel, size_hel, recipiente_hel, tipo_hel) values ('"+name+"', "+price+", "+gram+", '"+size+"', '"+recipiente+"', '"+tipo+"')";
                 set.executeUpdate(q);
                 System.out.println("¡Registro exitoso!");
                 
                 out.println("<!DOCTYPE html>");
                 out.println("<html>");
                 out.println("<head>");
-                out.println("<title>Servlet Registro</title>");
+                out.println("<title>Administrar | Ben & Jerry's</title>");
                 out.println("<link rel=\"stylesheet\" href=\"./CSS/estilo2.css\">");
                 out.println("</head>");
                 out.println("<body>");
@@ -80,9 +80,12 @@ public class Registro extends HttpServlet {
                 out.println("<br>");
                 out.println("<table class=\"tabla\" border='2'>"
                     + "<thead>"
-                        + "<th>Nombre del helado</th>"
-                        + "<th>Edad</th>"
-                        + "<th>Email</th></tr>"
+                        + "<th>Nombre</th>"
+                        + "<th>Precio</th>"
+                        + "<th>Gramos</th>"
+                        + "<th>Tamaño</th>"
+                        + "<th>Recipiente</th>"
+                        + "<th>Tipo</th>"
                     + "</thead>");
                 out.println("<tbody>"
                             + "<td>"+name+"</td>"
@@ -110,7 +113,7 @@ public class Registro extends HttpServlet {
                 out.println("</body>");
                 out.println("</html>");
                 
-                System.out.println("No se registró en la tabla");
+                System.out.println("No se registró en la tabla.");
                 System.out.println(e.getMessage());
                 System.out.println(Arrays.toString(e.getStackTrace()));
             }

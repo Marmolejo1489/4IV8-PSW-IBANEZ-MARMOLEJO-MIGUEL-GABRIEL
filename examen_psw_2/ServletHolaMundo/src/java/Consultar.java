@@ -16,18 +16,17 @@ public class Consultar extends HttpServlet {
     private ResultSet rs;
     
     public void init(ServletConfig cfg) throws ServletException{
-        String URL = "jdbc:mysql://localhost/helado";
-        
-        String userName = "root";
-        String password = "=/U_x12%aX";
+        String URL = "jdbc:mysql://us-cdbr-east-03.cleardb.com";
+        String userName = "b89af200f078f2";
+        String password = "522acc62";
                 
         try{
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(URL, userName, password);
             set = con.createStatement();
-            System.out.println("Conexión exitosa");
+            System.out.println("¡Conexión exitosa!");
         }catch(Exception e){
-            System.out.println("Conexión no exitosa");
+            System.out.println("Conexión no exitosa.");
             System.out.println(e.getMessage());
             System.out.println(e.getStackTrace());
         }
@@ -65,22 +64,24 @@ public class Consultar extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Consultar</title>");
+            out.println("<title>Consulta | Ben & Jerry's</title>");
             out.println("<link rel=\"stylesheet\" href=\"./CSS/estilo2.css\">");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1 class=\"title\">Tabla de usuarios</h1>");
+            out.println("<h1 class=\"title\">Tabla de productos</h1>");
             out.println("<table class=\"tabla2\" border='2'>"
                     + "<thead>"
-                        + "<tr><th>ID</th>"
-                        + "<th>Nombre completo</th>"
-                        + "<th>Edad</th>"
-                        + "<th>Correo electrónico</th></tr>"
+                        + "<th>Nombre</th>"
+                        + "<th>Precio</th>"
+                        + "<th>Gramos</th>"
+                        + "<th>Tamaño</th>"
+                        + "<th>Recipiente</th>"
+                        + "<th>Tipo</th>"
                     + "</thead>");
             try{
                 //codigo java para la consulta
-                String nom, appat, apmat, correo;
-                int edad, id;
+                String name, size, recipiente, tipo;
+                int id, price, gram;
                 
                 //tenemos que crear la querry
                 
@@ -91,28 +92,32 @@ public class Consultar extends HttpServlet {
                 
                 while(rs.next()){
                     //mientras exista un registro hay que obtener los datos de la consulta
-                    id = rs.getInt("id_usu");
-                    nom = rs.getString("nom_usu");
-                    appat = rs.getString("appat_usu");
-                    apmat = rs.getString("apmat_usu");
-                    edad = rs.getInt("edad_usu");
-                    correo = rs.getString("correo_usu");
+                    id = rs.getInt("id_hel");
+                    name = rs.getString("name_hel");
+                    price = rs.getInt("price_hel");
+                    gram = rs.getInt("gram_hel");
+                    size = rs.getString("gram_hel");
+                    recipiente = rs.getString("recipiente_hel");
+                    tipo = rs.getString("tipo_hel");
                     
                     out.println("<tbody>"
                             + "<tr><td>"+id+"</td>"
-                            + "<td>"+nom+" "+appat+" "+apmat+"</td>"
-                            + "<td>"+edad+"</td>"
-                            + "<td>"+correo+"</td></tr>"
+                            + "<td>"+name+"</td>"
+                            + "<td>"+price+"</td>"
+                            + "<td>"+gram+"</td>"
+                            + "<td>"+size+"</td>"
+                            + "<td>"+recipiente+"</td>"
+                            + "<td>"+tipo+"</td></tr>"
                             + "</tbody>");
                 }
                 //hay que cerrar los hilos
                 rs.close();
                 set.close();
                 
-                System.out.println("Consulta Exitosa");
+                System.out.println("¡Consulta exitosa!");
                     
             }catch(Exception e){
-                System.out.println("Error al realizar la consulta");
+                System.out.println("Error al realizar la consulta.");
                 System.out.println(e.getMessage());
                 System.out.println(e.getStackTrace());
             }
